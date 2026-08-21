@@ -1,9 +1,14 @@
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from datetime import UTC, datetime
 
 from sqlalchemy import delete
 
-from app.db import get_session_factory
-from app.models import Brand, Customer, Order, Store
+from app.db import get_session_factory  # noqa: E402
+from app.models import Brand, Customer, Order, Store  # noqa: E402
 
 PHONE = "+15550001111"
 
